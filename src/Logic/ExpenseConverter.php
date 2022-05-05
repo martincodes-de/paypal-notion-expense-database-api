@@ -2,7 +2,7 @@
 
 namespace src\Logic;
 
-class ExpenseConverter
+final class ExpenseConverter
 {
 
 }
