@@ -18,6 +18,7 @@ class ComposerStaticInit19b705e9f5f81197a185267fc9f69794
         array (
             'src\\Presentation\\' => 17,
             'src\\Persistence\\' => 16,
+            'src\\Logic\\' => 10,
         ),
         'P' => 
         array (
@@ -40,6 +41,10 @@ class ComposerStaticInit19b705e9f5f81197a185267fc9f69794
         'src\\Persistence\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/Persistence',
+        ),
+        'src\\Logic\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Logic',
         ),
         'Psr\\Http\\Message\\' => 
         array (
@@ -168,6 +173,7 @@ class ComposerStaticInit19b705e9f5f81197a185267fc9f69794
         'Psr\\Http\\Message\\UploadedFileInterface' => __DIR__ . '/..' . '/psr/http-message/src/UploadedFileInterface.php',
         'Psr\\Http\\Message\\UriFactoryInterface' => __DIR__ . '/..' . '/psr/http-factory/src/UriFactoryInterface.php',
         'Psr\\Http\\Message\\UriInterface' => __DIR__ . '/..' . '/psr/http-message/src/UriInterface.php',
+        'src\\Logic\\ExpenseConverter' => __DIR__ . '/../..' . '/src/Logic/ExpenseConverter.php',
         'src\\Persistence\\ConfigurationDataSource' => __DIR__ . '/../..' . '/src/Persistence/ConfigurationDataSource.php',
         'src\\Persistence\\Exceptions\\ConfigurationLoadingException' => __DIR__ . '/../..' . '/src/Persistence/Exceptions/ConfigurationLoadingException.php',
         'src\\Presentation\\JsonResponseOutput' => __DIR__ . '/../..' . '/src/Presentation/JsonResponseOutput.php',
