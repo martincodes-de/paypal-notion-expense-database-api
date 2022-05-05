@@ -2,7 +2,7 @@
 
 namespace src\Presentation;
 
-class JsonResponseOutput
+final class JsonResponseOutput
 {
     public function __construct(
         private array $outputJson,
