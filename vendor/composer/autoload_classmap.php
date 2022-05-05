@@ -109,5 +109,8 @@ return array(
     'Psr\\Http\\Message\\UploadedFileInterface' => $vendorDir . '/psr/http-message/src/UploadedFileInterface.php',
     'Psr\\Http\\Message\\UriFactoryInterface' => $vendorDir . '/psr/http-factory/src/UriFactoryInterface.php',
     'Psr\\Http\\Message\\UriInterface' => $vendorDir . '/psr/http-message/src/UriInterface.php',
+    'src\\Persistence\\ConfigurationDataSource' => $baseDir . '/src/Persistence/ConfigurationDataSource.php',
+    'src\\Persistence\\Exceptions\\ConfigurationLoadingException' => $baseDir . '/src/Persistence/Exceptions/ConfigurationLoadingException.php',
+    'src\\Presentation\\JsonResponseOutput' => $baseDir . '/src/Presentation/JsonResponseOutput.php',
     'src\\Presentation\\NotionExpenseApplication' => $baseDir . '/src/Presentation/NotionExpenseApplication.php',
 );

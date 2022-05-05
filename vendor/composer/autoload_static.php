@@ -17,6 +17,7 @@ class ComposerStaticInit19b705e9f5f81197a185267fc9f69794
         's' => 
         array (
             'src\\Presentation\\' => 17,
+            'src\\Persistence\\' => 16,
         ),
         'P' => 
         array (
@@ -35,6 +36,10 @@ class ComposerStaticInit19b705e9f5f81197a185267fc9f69794
         'src\\Presentation\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/Presentation',
+        ),
+        'src\\Persistence\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Persistence',
         ),
         'Psr\\Http\\Message\\' => 
         array (
@@ -163,6 +168,9 @@ class ComposerStaticInit19b705e9f5f81197a185267fc9f69794
         'Psr\\Http\\Message\\UploadedFileInterface' => __DIR__ . '/..' . '/psr/http-message/src/UploadedFileInterface.php',
         'Psr\\Http\\Message\\UriFactoryInterface' => __DIR__ . '/..' . '/psr/http-factory/src/UriFactoryInterface.php',
         'Psr\\Http\\Message\\UriInterface' => __DIR__ . '/..' . '/psr/http-message/src/UriInterface.php',
+        'src\\Persistence\\ConfigurationDataSource' => __DIR__ . '/../..' . '/src/Persistence/ConfigurationDataSource.php',
+        'src\\Persistence\\Exceptions\\ConfigurationLoadingException' => __DIR__ . '/../..' . '/src/Persistence/Exceptions/ConfigurationLoadingException.php',
+        'src\\Presentation\\JsonResponseOutput' => __DIR__ . '/../..' . '/src/Presentation/JsonResponseOutput.php',
         'src\\Presentation\\NotionExpenseApplication' => __DIR__ . '/../..' . '/src/Presentation/NotionExpenseApplication.php',
     );
 
