@@ -2,8 +2,16 @@
 
 namespace src\Presentation;
 
+use src\Persistence\ConfigurationDataSource;
+
 final class NotionExpenseApplication
 {
+    public function __construct(
+        private readonly ConfigurationDataSource $configurationDataSource = new ConfigurationDataSource()
+    )
+    {
+    }
+
     public function run()
     {
         if (!$this->isNewDataSended()) {
