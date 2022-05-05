@@ -9,7 +9,7 @@ final class ConfigurationDataSource
 {
     private string $configurationUrl = __DIR__."/../../config.ini";
     private string $notion_app_secret;
-    private string $database_id;
+    private string $notion_database_id;
 
     public function __construct()
     {
@@ -39,7 +39,7 @@ final class ConfigurationDataSource
     private function setConfiguration(array $configuration): void
     {
         $this->notion_app_secret = $configuration["notion_app_secret"];
-        $this->database_id = $configuration["database_id"];
+        $this->notion_database_id = $configuration["notion_database_id"];
     }
 
     /**
@@ -53,8 +53,8 @@ final class ConfigurationDataSource
     /**
      * @return string
      */
-    public function getDatabaseId(): string
+    public function getNotionDatabaseId(): string
     {
-        return $this->database_id;
+        return $this->notion_database_id;
     }
 }
