@@ -16,14 +16,14 @@ final class NotionExpenseApplication
 
     public function run(): void
     {
-        if (!$this->areNewExpensesSended()) {
+        if (!$this->areNewExpensesSent()) {
             new JsonResponseOutput([
                 "msg" => "No expenses sent.",
             ]);
         }
     }
 
-    private function areNewExpensesSended(): bool
+    private function areNewExpensesSent(): bool
     {
         return array_key_exists("expenses", $_POST);
     }
