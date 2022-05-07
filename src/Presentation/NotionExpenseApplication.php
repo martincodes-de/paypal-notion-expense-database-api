@@ -18,7 +18,7 @@ final class NotionExpenseApplication
     {
         if (!$this->areNewExpensesSended()) {
             new JsonResponseOutput([
-                "msg" => "No data sended.",
+                "msg" => "No expenses sent.",
             ]);
         }
     }
