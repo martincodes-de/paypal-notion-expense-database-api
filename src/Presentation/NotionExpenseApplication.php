@@ -2,27 +2,29 @@
 
 namespace src\Presentation;
 
+use src\Logic\ExpenseConverter;
 use src\Persistence\ConfigurationDataSource;
 
 final class NotionExpenseApplication
 {
     public function __construct(
-        private readonly ConfigurationDataSource $config = new ConfigurationDataSource()
+        private readonly ConfigurationDataSource $config = new ConfigurationDataSource(),
+        private readonly ExpenseConverter $converter = new ExpenseConverter(),
     )
     {
     }
 
-    public function run()
+    public function run(): void
     {
-        if (!$this->isNewDataSended()) {
+        if (!$this->areNewExpensesSended()) {
             new JsonResponseOutput([
                 "msg" => "No data sended.",
             ]);
         }
     }
 
-    private function isNewDataSended()
+    private function areNewExpensesSended(): bool
     {
-        return array_key_exists("newData", $_POST);
+        return array_key_exists("expenses", $_POST);
     }
 }
