@@ -16,15 +16,26 @@ final class NotionExpenseApplication
 
     public function run(): void
     {
-        if (!$this->areNewExpensesSent()) {
+        $incomingRequestBody = json_decode(file_get_contents("php://input"));
+        $rawExpenses = $incomingRequestBody->expenses ?? null;
+
+        if (!$this->areExpensesSent($rawExpenses)) {
             new JsonResponseOutput([
                 "msg" => "No expenses sent.",
             ]);
         }
+
+        new JsonResponseOutput([
+            "data" => $incomingRequestBody->expenses,
+        ]);
     }
 
-    private function areNewExpensesSent(): bool
+    private function areExpensesSent(?array $expenses): bool
     {
-        return array_key_exists("expenses", $_POST);
+        if (is_null($expenses) || count($expenses) < 1) {
+            return false;
+        }
+
+        return true;
     }
 }
