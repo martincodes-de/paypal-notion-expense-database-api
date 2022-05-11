@@ -16,8 +16,15 @@ final class NotionExpenseApplication
 
     public function run(): void
     {
+        $apiPasswordFromIncomingRequest = $_GET["api_password"] ?? null;
         $incomingRequestBody = json_decode(file_get_contents("php://input"));
         $rawExpenses = $incomingRequestBody->expenses ?? null;
+
+        if (!$this->isRequestAuthenticated($apiPasswordFromIncomingRequest)) {
+            new JsonResponseOutput([
+                "msg" => "Not authenticated.",
+            ]);
+        }
 
         if (!$this->areExpensesSent($rawExpenses)) {
             new JsonResponseOutput([
@@ -33,6 +40,15 @@ final class NotionExpenseApplication
     private function areExpensesSent(?array $expenses): bool
     {
         if (is_null($expenses) || count($expenses) < 1) {
+            return false;
+        }
+
+        return true;
+    }
+
+    private function isRequestAuthenticated(?string $apiKey): bool
+    {
+        if ($apiKey !== $this->config->getApiPassword()) {
             return false;
         }
 
