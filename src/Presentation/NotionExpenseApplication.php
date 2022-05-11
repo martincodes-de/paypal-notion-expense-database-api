@@ -36,8 +36,11 @@ final class NotionExpenseApplication
             ]);
         }
 
+        $expenses = $this->converter->convertToExpenses($rawExpenses);
+
         new JsonResponseOutput([
-            "data" => $incomingRequestBody->expenses,
+            "raw" => $incomingRequestBody->expenses,
+            "converted" => $expenses
         ]);
     }
 
