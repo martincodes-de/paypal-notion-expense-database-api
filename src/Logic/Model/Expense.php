@@ -19,4 +19,12 @@ final class Expense
     {
         return $this->category;
     }
+
+    /**
+     * @param string $category
+     */
+    public function setCategory(string $category): void
+    {
+        $this->category = $category;
+    }
 }
