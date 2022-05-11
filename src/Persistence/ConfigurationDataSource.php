@@ -8,8 +8,9 @@ use src\Persistence\Exceptions\ConfigurationLoadingException;
 final class ConfigurationDataSource
 {
     private string $configurationUrl = __DIR__."/../../config.ini";
-    private string $notion_app_secret;
-    private string $notion_database_id;
+    private string $notionAppSecret;
+    private string $notionDatabaseId;
+    private string $apiPassword;
 
     public function __construct()
     {
@@ -38,8 +39,9 @@ final class ConfigurationDataSource
      */
     private function setConfiguration(array $configuration): void
     {
-        $this->notion_app_secret = $configuration["notion_app_secret"];
-        $this->notion_database_id = $configuration["notion_database_id"];
+        $this->notionAppSecret = $configuration["notion_app_secret"];
+        $this->notionDatabaseId = $configuration["notion_database_id"];
+        $this->apiPassword = $configuration["api_password"];
     }
 
     /**
@@ -47,7 +49,7 @@ final class ConfigurationDataSource
      */
     public function getNotionAppSecret(): string
     {
-        return $this->notion_app_secret;
+        return $this->notionAppSecret;
     }
 
     /**
@@ -55,6 +57,11 @@ final class ConfigurationDataSource
      */
     public function getNotionDatabaseId(): string
     {
-        return $this->notion_database_id;
+        return $this->notionDatabaseId;
+    }
+
+    public function getApiPassword()
+    {
+        return $this->apiPassword;
     }
 }
