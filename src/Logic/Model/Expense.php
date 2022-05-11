@@ -10,6 +10,7 @@ final class Expense
         public readonly string $description,
         private string $category,
         public readonly string $price,
+        public readonly ?string $notice,
     )
     {
     }

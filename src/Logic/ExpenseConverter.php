@@ -29,7 +29,7 @@ final class ExpenseConverter
 
     private function convertSingleToExpense(array $rawExpense): Expense
     {
-        return new Expense($rawExpense["description"], "undefined", $rawExpense["price"]);
+        return new Expense($rawExpense["description"], "undefined", $rawExpense["price"], $rawExpense["notice"]);
     }
 
     private function isConvertable(array $rawExpense): bool
