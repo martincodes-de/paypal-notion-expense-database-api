@@ -46,9 +46,9 @@ final class NotionExpenseApplication
         return true;
     }
 
-    private function isRequestAuthenticated(?string $apiKey): bool
+    private function isRequestAuthenticated(?string $apiPassword): bool
     {
-        if ($apiKey !== $this->config->getApiPassword()) {
+        if ($apiPassword !== $this->config->getApiPassword()) {
             return false;
         }
 
