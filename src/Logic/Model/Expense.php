@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace src\Logic\Model;
 
 final class Expense

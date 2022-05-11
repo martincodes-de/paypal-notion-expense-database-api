@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace src\Presentation;
 
 final class JsonResponseOutput
