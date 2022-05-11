@@ -24,12 +24,14 @@ final class NotionExpenseApplication
 
         if (!$this->isRequestAuthenticated($apiPasswordFromIncomingRequest)) {
             new JsonResponseOutput([
+                "status" => "error",
                 "msg" => "Not authenticated.",
             ]);
         }
 
         if (!$this->areExpensesSent($rawExpenses)) {
             new JsonResponseOutput([
+                "status" => "error",
                 "msg" => "No expenses sent.",
             ]);
         }
